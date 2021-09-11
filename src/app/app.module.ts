@@ -8,6 +8,7 @@ import { UserComponent } from './user/user.component';
 import { CompanyComponent } from './company/company.component';
 import { FormCompanyRegisterComponent } from './company/form-company-register/form-company-register.component';
 import { FormCompanyFindComponent } from './company/form-company-find/form-company-find.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormCompanyFindComponent } from './company/form-company-find/form-compa
     UserComponent,
     CompanyComponent,
     FormCompanyRegisterComponent,
-    FormCompanyFindComponent
+    FormCompanyFindComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
