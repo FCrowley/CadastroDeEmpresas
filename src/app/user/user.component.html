@@ -1,1 +1,11 @@
-<p>user works!</p>
+<h1>{{ title }}</h1>
+
+<div>
+    <button (click)="callActionUser('cadastrar')">Cadastrar Usuário</button>
+    <button (click)="callActionUser('visualizar')">Visualizar Usuário</button>
+</div>
+
+<div>
+    <app-form-user-register *ngIf="typeForm == 'cadastrar'"></app-form-user-register>
+    <app-form-user-find *ngIf="typeForm == 'visualizar'"></app-form-user-find>
+</div>
