@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,9 @@ import { FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   formBuilder: any;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   loginForm!: FormGroup;
 
@@ -18,5 +21,11 @@ export class LoginComponent implements OnInit {
         userName: ['', Validators.required],
         password: ['', Validators.required]
     });
+ }
+
+ open() {
+   console.log('Entrou');
+   
+  this.router.navigate(['/home']);
  }
 }
