@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "xxxx": {
+    "CentralDeApostasFront": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/xxxx",
+            "outputPath": "dist/CentralDeApostasFront",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "xxxx:build:production"
+              "browserTarget": "CentralDeApostasFront:build:production"
             },
             "development": {
-              "browserTarget": "xxxx:build:development"
+              "browserTarget": "CentralDeApostasFront:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "xxxx:build"
+            "browserTarget": "CentralDeApostasFront:build"
           }
         },
         "test": {
@@ -110,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "xxxx"
+  "defaultProject": "CentralDeApostasFront"
 }
