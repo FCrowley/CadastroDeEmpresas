@@ -1,13 +1,14 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
 <h1>Seja Bem-Vindo ao Central de Apostas</h1>
 
-<button [routerLink]="['/user']">
-    U S U Á R I O
-</button>
-
-<button [routerLink]="['/company']">
-    E M P R E S A
-</button>
-
-<button [routerLink]="['/login']">
-    S A I R
-</button>
+<nav class="navbar navbar-light bg-light">
+    <form class="container-fluid justify-content-start">
+      <button [routerLink]="['/user']" class="btn btn-outline-success me-2" type="button">U S U Á R I O </button>
+      <button [routerLink]="['/company']" class="btn btn-outline-success me-2" type="button">E M P R E S A</button>
+      <button [routerLink]="['/login']" class="btn btn-sm btn-outline-secondary" type="button">S A I R</button>
+    </form>
+  </nav>

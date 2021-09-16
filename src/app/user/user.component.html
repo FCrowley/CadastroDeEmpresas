@@ -1,11 +1,19 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <h1>{{ title }}</h1>
 
 <div>
-    <button (click)="callActionUser('cadastrar')">Cadastrar Usuário</button>
-    <button (click)="callActionUser('visualizar')">Visualizar Usuário</button>
+    <div class="grid">
+        <div class="g-col-6">
+            <button (click)="callActionUser('cadastrar')">Cadastrar Usuário</button></div>
+        <div class="g-col-6">
+             <button (click)="callActionUser('visualizar')">Visualizar Usuário</button></div>
 </div>
 
 <div>
     <app-form-user-register *ngIf="typeForm == 'cadastrar'"></app-form-user-register>
     <app-form-user-find *ngIf="typeForm == 'visualizar'"></app-form-user-find>
 </div>
+
