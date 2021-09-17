@@ -11,6 +11,7 @@ import { FormUserRegisterComponent } from './user/form-user-register/form-user-r
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UserComponent } from './user/user.component';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
