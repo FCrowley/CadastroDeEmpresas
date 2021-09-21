@@ -4,29 +4,11 @@
 
 <h1>{{ title }}</h1>
 
-<div>
-    <div class="grid">
-        <div class="g-col-6">
-            <button (click)="callActionUser('cadastrar')">Cadastrar Usuário</button></div>
-        <div class="g-col-6">
-             <button (click)="callActionUser('visualizar')">Visualizar Usuário</button></div>
-</div>
-
+<div class="bg-info clearfix">
+    <button (click)="callActionUser('cadastrar')" class="btn btn-secondary float-left">Cadastrar Usuário</button>
+    <button (click)="callActionUser('visualizar')"class="btn btn-secondary float-right">Visualizar Usuário</button>
+  </div>
 <div>
     <app-form-user-register *ngIf="typeForm == 'cadastrar'"></app-form-user-register>
     <app-form-user-find *ngIf="typeForm == 'visualizar'"></app-form-user-find>
 </div>
-
-
-
-<<<<<<< HEAD
-=======
-<br />
-<br />
-<br />
-<br />
-
-<div>
-    <button (click)="teste()">TESTE</button>
-</div>
->>>>>>> 58d7542af81a6b9018025bcddc0d37189bcf2a3a

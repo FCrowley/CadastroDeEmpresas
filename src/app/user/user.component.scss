@@ -1,3 +1,16 @@
 mat-grid-tile {
   background: rgb(7, 7, 242);
 }
+// O mixin, em si.
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+// Como usar o mixin.
+.element {
+  @include clearfix;
+}
