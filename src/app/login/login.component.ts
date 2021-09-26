@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from './auth.service';
+import { userName } from './username';
 
 @Component({
   selector: 'app-login',
@@ -8,24 +9,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  formBuilder: any;
 
-  constructor(
-    private router: Router,
-  ) { }
+  private username: userName = new userName();
 
-  loginForm!: FormGroup;
+    login: any = {
+    name: null,
+    password: null,
+  }
+  onSubmit(form) {
+    console.log(form);
 
+    console.log(this.login);
+
+    console.log(this.submit)
+  }
+   submit(){
+    this.authService.submit(this.username)
+    
+    console.log('Entrou');
+   this.router.navigate(['/home']);
+
+  }
+  constructor(private authService: AuthService,
+              private router: Router) { }
+      
   ngOnInit(): void {
-    this.loginForm = this.formBuilder.group({
-        userName: ['', Validators.required],
-        password: ['', Validators.required]
-    });
- }
-
- open() {
-   console.log('Entrou');
-   
-  this.router.navigate(['/home']);
- }
+  }
 }
+
