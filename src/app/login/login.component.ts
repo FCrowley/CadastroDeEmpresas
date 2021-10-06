@@ -1,7 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from './auth.service';
-import { userName } from './username';
 
 @Component({
   selector: 'app-login',
@@ -10,30 +10,58 @@ import { userName } from './username';
 })
 export class LoginComponent implements OnInit {
 
-  private username: userName = new userName();
+  login: FormGroup;
+  loginAuthenticated: boolean;
+  email: string;
+  password: string;
+  
+  constructor(private formBuilder: FormBuilder,
+              private http: HttpClient,
+              private router: Router) {}
+            
 
-    login: any = {
-    name: null,
-    password: null,
+ngOnInit() {
+
+    this.login = this.formBuilder.group({
+      email: [null, [Validators.required, Validators.email]],
+      password: [null, Validators.required]  
+
+     /* this.login = new FormGroup({
+        email: new FormControl (null),
+        password: new FormControl (null) */  
+  });  
+
   }
-  onSubmit(form) {
-    console.log(form);
 
-    console.log(this.login);
+ onSubmit(){
+console.log(this.login.value);
 
-    console.log(this.submit)
-  }
-   submit(){
-    this.authService.submit(this.username)
-    
-    console.log('Entrou');
-   this.router.navigate(['/home']);
+this.router.navigate(['/home']);
 
-  }
-  constructor(private authService: AuthService,
-              private router: Router) { }
-      
-  ngOnInit(): void {
+if (this.login.valid){
+         this.http
+           .post('https://httpbin.org/post',JSON.stringify(this.login.value))
+           .subscribe (dados=>{
+            console.log(dados);
+            //reset form
+            // this.login.reset();
+            
+          },
+          
+          (Error: any)=>alert('erro')
+      );
+        }   else {
+          console.log('login invalido');  
+          Object.keys(this.login).forEach(campo=>{
+            console.log(campo);
+            const control= this.login.get(campo);
+          control.markAllAsTouched
+          })  
+          
+          
+          
+ }
+ 
   }
 }
 

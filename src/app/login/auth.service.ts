@@ -1,26 +1,29 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { userName } from './username';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  login: any;
+  email: string;
+  password: string;
+  loginAuthenticated: boolean;
+  router: any;
 
-  private userNameAuthenticated: Boolean = false
+  constructor() { }
 
-  constructor(private router: Router) { }
-
-  submit(username: userName){
-
-    if(username.email === 'usuario@email.com' && 
-       username.password === '12345678'){
-
-        this.userNameAuthenticated = true;
-
-        this.router.navigate(['/home']);
-         
+  onSubmit(){
+    console.log(this.login.value);
+    
+    if (this.email === 'username@mail.com' &&
+      this.password === '12345678'){
+    
+        this.loginAuthenticated = true;
+    
+    this.router.navigate(['/home']);
+    
+    }  else {
+      this.loginAuthenticated = false;
     }
-    else this.userNameAuthenticated = false
-  }
 }
+ }

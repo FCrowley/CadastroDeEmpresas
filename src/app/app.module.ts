@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpResponse } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HomeModule } from './home/home.module';
 
@@ -17,6 +17,7 @@ import { FormUserRegisterComponent } from './user/form-user-register/form-user-r
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { AuthService } from './login/auth.service';
+import { User } from './user/user';
 
 
 @NgModule({
@@ -38,11 +39,11 @@ import { AuthService } from './login/auth.service';
     ReactiveFormsModule,
     CommonModule,
     HomeModule,
-    FormsModule
- 
+    FormsModule,
+  
         
   ],
-  providers: [AuthService],
+  providers: [AuthService, User],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
