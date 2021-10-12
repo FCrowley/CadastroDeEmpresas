@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpResponse } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HomeModule } from './home/home.module';
 
@@ -16,9 +16,9 @@ import { FormUserFindComponent } from './user/form-user-find/form-user-find.comp
 import { FormUserRegisterComponent } from './user/form-user-register/form-user-register.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import { AuthService } from './login/auth.service';
 import { User } from './user/user';
-
+import { authService } from './login/auth.service';
+import { XloginComponent } from './xlogin/xlogin.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { User } from './user/user';
     FormUserRegisterComponent,
     HomeComponent,
     UserComponent,
-    
+    XloginComponent,
+   
   ],
   imports: [
     AppRoutingModule,
@@ -43,7 +44,7 @@ import { User } from './user/user';
   
         
   ],
-  providers: [AuthService, User],
+  providers: [authService, User],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
