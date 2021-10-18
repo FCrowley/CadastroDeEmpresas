@@ -1,23 +1,61 @@
-body {
+body,html {
     margin: 0;
     padding: 0;
-    background-color: #17a2b8;
+    background-color: #080311;
     height: 100vh;
+
   }
+  .bg{
+    background-image: url("bg/img/ft1_photos_v2_x2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
   #login .container #login-row #login-column #login-box {
     margin-top: 120px;
     max-width: 600px;
     height: 320px;
     border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
+    background-color: #e3d9f348;
   }
-
   #login .container #login-row #login-column #login-box #login-form {
     padding: 20px;
   }
   #login .container #login-row #login-column #login-box #login-form #register-link {
     margin-top: -85px;
   }
-  .ng-invalid.ng-touched:not(form) {
-    border: 1px solid red;
+
+  .login-align {
+    margin-top: -8%;
   }
+  .login-container {
+    height: 400px !important; 
+  }
+  .login-button {
+    margin-top: 50px;
+  }
+  .login-forget-password {
+    margin-left: 135px;
+    margin-top: 21px;
+    margin-bottom: -22px;
+    color: #16033a!important;
+  }
+  .login-text-color {
+    color: #080311!important;
+  }
+  .user-text-color {
+    color: #080311!important;
+  }
+  .password-text-color {
+    color: #080311!important;
+  }
+  .enter-text-color{
+    background: #0e011b!important;
+    color: #faffff!important;
+    border-color: #100320f1!important;
+  }
+  
+  /* .ng-invalid.ng-touched:not(form) {
+    border: 1px solid red;
+  } */

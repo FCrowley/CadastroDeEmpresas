@@ -16,9 +16,7 @@ import { FormUserFindComponent } from './user/form-user-find/form-user-find.comp
 import { FormUserRegisterComponent } from './user/form-user-register/form-user-register.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import { User } from './user/user';
-import { authService } from './login/auth.service';
-import { XloginComponent } from './xlogin/xlogin.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +28,8 @@ import { XloginComponent } from './xlogin/xlogin.component';
     FormUserRegisterComponent,
     HomeComponent,
     UserComponent,
-    XloginComponent,
+    ForgetPasswordComponent,
+  
    
   ],
   imports: [
@@ -41,10 +40,9 @@ import { XloginComponent } from './xlogin/xlogin.component';
     CommonModule,
     HomeModule,
     FormsModule,
-  
         
   ],
-  providers: [authService, User],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,46 +12,51 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   [x: string]: any;
 
-  login: FormGroup;
-  loginAuthenticated: boolean;
+  loginForm: FormGroup;
+  loginFormAuthenticated: boolean;
 
   constructor(private formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router) { }
 
   ngOnInit() {
-    this.login = this.formBuilder.group({
-      email: [null, [Validators.required, Validators.email]],
-      password: [null, Validators.required],
+    this.loginForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
     })
   }
 
   onSubmit() {
-    console.log(this.login.value);
+    console.log(this.loginForm.value);
     this.router.navigate(['/home']);
-    if (this.login.valid) {
+    if (this.loginForm.valid) {
       this.http
-        .post('https://httpbin.org/post', JSON.stringify(this.login.value))
+        .post('https://httpbin.org/post', JSON.stringify(this.loginForm.value))
         .subscribe(dados => {
           console.log(dados);
         },
           (Error: any) => alert('erro'));
     } else {
       console.log('login invalido');
-      Object.keys(this.login).forEach(campo => {
+      Object.keys(this.loginForm).forEach(campo => {
         console.log(campo);
-        const control = this.login.get(campo);
+        const control = this.loginForm.get(campo);
         control.markAllAsTouched
       })
     }
   }
   ChecksValidTouched(campo: string | (string | number)[]) {
-    return !this.login.get(campo).valid && this.login.get(campo).touched;
+    return !this.loginForm.get(campo).valid && this.loginForm.get(campo).touched;
   }
-  aplicaCssErro(campo: string | (string | number)[]) {
-    return {
-      'has-error': this.ChecksValidTouched(campo),
-      'has-feedback': this.ChecksValidTouched(campo)
-    }
+
+  directForgetPassword() {
+    this.router.navigate(['/forget-password']);
+  }
+
+  get email() {
+    return this.loginForm.get('email')
+  }
+  get password() {
+    return this.loginForm.get('password')
   }
 }
