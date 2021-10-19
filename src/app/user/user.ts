@@ -7,13 +7,8 @@ export class User {
     guid: string;
     registrationDate: string;
     changeDate: string;
+    email: string;
+    password: string;
+    name: string;
 
-    constructor( email: string, password: string) {
-       
-        this.email = email;
-        this.password = password;
-      }
-      
-      email: string;
-      password: string;
-    }
+}

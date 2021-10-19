@@ -1,9 +1,11 @@
 .bg01{
     background-image: url("bg/img/campo01.jpg");
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed;    
 }
 
 ._324c4dab879ba825000621078996e10c-css{
@@ -52,10 +54,6 @@
         -ms-user-select:none;
             user-select:none;
   }
-  
-  
-  
-  /* Reset styles for links within notifications */
   
   ._17606607f52a4a3eebf0d5e8c75b3937-css a {
     -webkit-animation: none 0s ease 0s 1 normal none running;
