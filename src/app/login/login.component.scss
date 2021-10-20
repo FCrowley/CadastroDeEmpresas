@@ -20,20 +20,21 @@ body,html {
     background-color: #e3d9f348;
   }
   #login .container #login-row #login-column #login-box #login-form {
-    padding: 20px;
+    padding: 30px;
   }
   #login .container #login-row #login-column #login-box #login-form #register-link {
-    margin-top: -85px;
+    margin-top: -80px;
   }
-
   .login-align {
     margin-top: -8%;
   }
   .login-container {
-    height: 400px !important; 
+    height: 440px !important; 
+    margin: 14px;
+    width: 342px;
   }
   .login-button {
-    margin-top: 50px;
+    margin-top: 16px;
   }
   .login-forget-password {
     margin-left: 135px;
@@ -46,16 +47,28 @@ body,html {
   }
   .user-text-color {
     color: #080311!important;
+    height: 30px;
+    width: 430px;
   }
   .password-text-color {
-    color: #080311!important;
+    color:#080311!important; 
+    height: 30px;
+    width: 430px
   }
   .enter-text-color{
     background: #0e011b!important;
     color: #faffff!important;
     border-color: #100320f1!important;
   }
+  .label-larg{
+    height: 30px;
+  }
+   .grid-form{
+    padding: 0px;
+    max-width: 30%;
+   }
+
   
-  /* .ng-invalid.ng-touched:not(form) {
+  .ng-invalid.ng-touched:not(form) {
     border: 1px solid red;
-  } */
+  } 

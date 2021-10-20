@@ -5,18 +5,20 @@
         </h5>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6 login-align">
+                <div id="login-column" class="col-md-6 login-align grid-form">
                     <div id="login-box" class="col-md-12 login-container">
-                        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="login-form" class="form"
-                            method="post">
-                            <h3 class="text-center text-info login-text-color">Entrar</h3>
+                        <form class="form grid-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="login-form"
+                            class="form" method="post">
+                            <h1 class="text-center text-info login-text-color">Login</h1>
                             <div class="form-group">
-                                <label for="email" class="text-info user-text-color">Usuário:</label><br>
-                                <input type="text" class="form-control" formControlName="email" id="email"
-                                    autocomplete="off" placeholder="Digite seu usuário">
-                                <div *ngIf="!email.pristine && email.errors && !email.valid && email.touched"
-                                    class="alert alert-danger" role="alert">
-                                    <p *ngIf="email.errors.required">
+                                <label for="email" class="text-info user-text-color">
+                                    <h4>Usuário:</h4>
+                                </label><br>
+                                <input type="text" class="form-control  user-text-color" formControlName="email"
+                                    id="email" autocomplete="off" placeholder="Digite seu usuário">
+                                <div *ngIf="email.errors && !email.valid && email.touched" class="alert alert-danger"
+                                    style="height: 37;" role="alert">
+                                    <p *ngIf="email.errors.required" style="margin: -8px;">
                                         O Usuário é obrigatório.
                                     </p>
                                     <p *ngIf="email.errors.email">
@@ -25,24 +27,29 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="password" class="text-info password-text-color">Senha:</label><br>
-                                <input type="text" class="form-control" formControlName="password" id="password"
-                                    placeholder="Digite sua senha">
-                                <div *ngIf="!password.pristine && password.errors && !password.valid && password.touched"
-                                    class="alert alert-danger" role="alert">
-                                    <p *ngIf="password.errors.required">
+                                <label for="password" class="text-info password-text-color">
+                                    <h4>Senha:</h4>
+                                </label><br>
+                                <input type="password" class="form-control user-text-color" formControlName="password"
+                                    id="password" placeholder="Digite sua senha">
+                                <div *ngIf="password.errors && !password.valid && password.touched"
+                                    class="alert alert-danger" style="height: 37;" role="alert">
+                                    <p *ngIf="password.errors.required" style="    margin: -8px;">
                                         A Senha é obrigatório.
                                     </p>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit"
+                                    class="btn btn-primary btn-lg btn-block login-button enter-text-color"
+                                    [disabled]="!loginForm.valid">Entrar</button>
                                 <div class="form-group">
-                                    <button (click)="directForgetPassword()" type="button" class="text-center btn btn-link login-forget-password">Esqueceu
+                                    <button (click)="directForgetPassword()" type="button"
+                                        class="text-center btn btn-link login-forget-password">Esqueceu
                                         a Senha?</button>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-lg btn-block login-button enter-text-color"
-                                    [disabled]="!loginForm.valid">Entrar</button>
-                            </div>
+
                         </form>
                     </div>
                 </div>
