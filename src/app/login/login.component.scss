@@ -23,51 +23,65 @@ body,html {
     padding: 30px;
   }
   #login .container #login-row #login-column #login-box #login-form #register-link {
-    margin-top: -80px;
+    margin-top: 0px;
   }
   .login-align {
-    margin-top: -8%;
+    margin-top: -10%;
   }
   .login-container {
     height: 440px !important; 
-    margin: 14px;
-    width: 342px;
   }
-  .login-button {
-    margin-top: 16px;
+  .grid-form{
+    margin: -100px 0px;
   }
   .login-forget-password {
-    margin-left: 135px;
-    margin-top: 21px;
-    margin-bottom: -22px;
-    color: #16033a!important;
+   color: #16033a!important;
+   margin: -40px 150px;
   }
   .login-text-color {
     color: #080311!important;
   }
   .user-text-color {
     color: #080311!important;
-    height: 30px;
-    width: 430px;
+    margin: -3px 0px;
+   
   }
   .password-text-color {
     color:#080311!important; 
-    height: 30px;
-    width: 430px
+    margin: -3px 0px;
+   
   }
   .enter-text-color{
     background: #0e011b!important;
     color: #faffff!important;
     border-color: #100320f1!important;
+    margin: 50px 1px;
   }
-  .label-larg{
-    height: 30px;
-  }
-   .grid-form{
-    padding: 0px;
-    max-width: 30%;
-   }
 
+
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+  .input-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+  }
+  .input-container input {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border: 0;
+    outline: none;
+    color: #333;
+  }
+  i {
+    /*background-image: url("bg/img/eye36.png");*/
+    margin: -29 410px;
+    color: #aaa;
+    cursor: default;
+  }
   
   .ng-invalid.ng-touched:not(form) {
     border: 1px solid red;

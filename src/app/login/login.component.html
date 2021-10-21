@@ -5,7 +5,7 @@
         </h5>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6 login-align grid-form">
+                <div id="login-column" class="col-md-6 login-align ">
                     <div id="login-box" class="col-md-12 login-container">
                         <form class="form grid-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="login-form"
                             class="form" method="post">
@@ -21,7 +21,7 @@
                                     <p *ngIf="email.errors.required" style="margin: -8px;">
                                         O Usuário é obrigatório.
                                     </p>
-                                    <p *ngIf="email.errors.email">
+                                    <p *ngIf="email.errors.email" style="margin: -8px;">
                                         Digite um e-mail válido.
                                     </p>
                                 </div>
@@ -30,8 +30,12 @@
                                 <label for="password" class="text-info password-text-color">
                                     <h4>Senha:</h4>
                                 </label><br>
-                                <input type="password" class="form-control user-text-color" formControlName="password"
+                                <input type="password" class="form-control user-text-color i input-container input-container input" 
+                                formControlName="password"
                                     id="password" placeholder="Digite sua senha">
+                                    <i class="material-icons visibility">visibility_off</i>
+                                    
+                                    <span class="lnr lnr-eye"></span>
                                 <div *ngIf="password.errors && !password.valid && password.touched"
                                     class="alert alert-danger" style="height: 37;" role="alert">
                                     <p *ngIf="password.errors.required" style="    margin: -8px;">
