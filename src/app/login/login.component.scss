@@ -3,7 +3,6 @@ body,html {
     padding: 0;
     background-color: #080311;
     height: 100vh;
-
   }
   .bg{
     background-image: url("bg/img/ft1_photos_v2_x2.jpg");
@@ -11,58 +10,75 @@ body,html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    padding: 30px;
 }
-  #login .container #login-row #login-column #login-box {
+  .login-box{
+    background-color: rgb(111 66 193 / 9%);
     margin-top: 120px;
     max-width: 600px;
     height: 320px;
-    border: 1px solid #9C9C9C;
-    background-color: #e3d9f348;
-  }
-  #login .container #login-row #login-column #login-box #login-form {
-    padding: 30px;
-  }
-  #login .container #login-row #login-column #login-box #login-form #register-link {
-    margin-top: 0px;
+    border: 1px solid #9c9c9c73;
+    background-color: #e3d9f317;
   }
   .login-align {
-    margin-top: -10%;
+    background-color: #f2f1f521;
+    margin: 48px 320px;
   }
-  .login-container {
-    height: 440px !important; 
-  }
-  .grid-form{
+  .grid-form {
     margin: -100px 0px;
   }
   .login-forget-password {
    color: #16033a!important;
    margin: -40px 150px;
   }
+  .text_ {
+    color:white
+    font-family cursive;
+  }
+  .text-top {
+    font-family: cursive;
+    color:white
+  }
   .login-text-color {
-    color: #080311!important;
+    color: #050505!important;
+    font-weight: 900;
+  }
+  .label-text{
+    width: 416px;
+    margin: -6px 27px;
   }
   .user-text-color {
-    color: #080311!important;
-    margin: -3px 0px;
-   
+    margin: 06px 30px;
+    color: black!important;
   }
   .password-text-color {
-    color:#080311!important; 
-    margin: -3px 0px;
-   
+    margin: 6px 30px;
+    color:#080311!important;  
   }
   .enter-text-color{
     background: #0e011b!important;
     color: #faffff!important;
     border-color: #100320f1!important;
-    margin: 50px 1px;
+    width: 335px;
+    margin: 48px 71px;
   }
+  .alert-error{
+    height: 33px;
+    width: 416px;
+    margin: 6px 27px;
+}
+  .alert-text{
+    margin: -8px 100px;
+  }
+
+
 
 
   @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
   .input-container {
-    width: 100%;
+    width: 416px;
+    margin: -6px 27px;
     display: flex;
     align-items: center;
     border: 1px solid #aaa;
@@ -77,8 +93,7 @@ body,html {
     color: #333;
   }
   i {
-    /*background-image: url("bg/img/eye36.png");*/
-    margin: -29 410px;
+    margin: -26 410px;
     color: #aaa;
     cursor: default;
   }
