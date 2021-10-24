@@ -11,25 +11,21 @@ body,html {
     background-position: center;
     background-attachment: fixed;
     padding: 30px;
-}
-  .login-box{
-    background-color: rgb(111 66 193 / 9%);
-    margin-top: 120px;
-    max-width: 600px;
-    height: 320px;
-    border: 1px solid #9c9c9c73;
-    background-color: #e3d9f317;
   }
   .login-align {
-    background-color: #f2f1f521;
-    margin: 48px 320px;
+    background-color: #9f95b850;
+    border: 2px solid;
+    border-color: #ac9dd359;
+    margin: 60px 320px;
+    max-width: 600px;
   }
   .grid-form {
-    margin: -100px 0px;
+    margin: -27px 78px;
   }
   .login-forget-password {
-   color: #16033a!important;
-   margin: -40px 150px;
+    font-weight: 700;
+    color: #16033a!important;
+    margin: -40px 150px;
   }
   .text_ {
     color:white
@@ -40,7 +36,7 @@ body,html {
     color:white
   }
   .login-text-color {
-    color: #050505!important;
+    color: #0e031ffa!important;
     font-weight: 900;
   }
   .label-text{
@@ -66,13 +62,10 @@ body,html {
     height: 33px;
     width: 416px;
     margin: 6px 27px;
-}
+  }
   .alert-text{
     margin: -8px 100px;
   }
-
-
-
 
   @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
@@ -97,7 +90,6 @@ body,html {
     color: #aaa;
     cursor: default;
   }
-  
   .ng-invalid.ng-touched:not(form) {
     border: 1px solid red;
   } 
