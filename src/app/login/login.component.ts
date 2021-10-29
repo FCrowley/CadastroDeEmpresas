@@ -44,6 +44,16 @@ export class LoginComponent implements OnInit {
         control.markAllAsTouched
       })
     }
+    /*  let btn = document.querySelector('.lnr-eye');
+     btn.addEventListener('click', function () {
+       let input = document.querySelector('#password');
+       if (input.getAttribute('type') == 'password') {
+         input.setAttribute('type', 'text');
+       } else {
+         input.setAttribute('type', 'password');
+       }
+     }); */
+
     const visibilityToggle = document.querySelector('.visibility');
 
     const input = document.querySelector('.input-container input');
@@ -59,9 +69,10 @@ export class LoginComponent implements OnInit {
         visibilityToggle.innerHTML = 'visibility_off';
       }
       password = !password;
-      
+
     });
   }
+
   ChecksValidTouched(campo: string | (string | number)[]) {
     return !this.loginForm.get(campo).valid && this.loginForm.get(campo).touched;
   }
@@ -69,7 +80,6 @@ export class LoginComponent implements OnInit {
   directForgetPassword() {
     this.router.navigate(['/forget-password']);
   }
-
   get email() {
     return this.loginForm.get('email')
   }

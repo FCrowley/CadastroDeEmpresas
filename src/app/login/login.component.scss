@@ -12,16 +12,60 @@ body,html {
     background-attachment: fixed;
     padding: 30px;
   }
+  /* Telefones em paisagem e abaixo */
+@media (max-width: 480px) { 
+  .login-align {
+    background-color: lawngreen!important;
+    width: 320%;
+  }
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px) {
+  .login-align {
+    background-color: rgb(85, 11, 155)!important;
+  }
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .login-align {
+    background-color: rgb(243, 12, 12)!important;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+  .login-align {
+    background-color: rgb(239, 243, 16)!important;
+  }
+}
+
+  /*For mobile phones
+  @media only screen and (max-width:510px) {
+    .login-align {
+     background-color: lawngreen!important;
+      width: 320%;
+      
+      
+    }
+  
+  } */ 
+
   .login-align {
     background-color: #9f95b850;
     border: 2px solid;
     border-color: #ac9dd359;
-    margin: 60px 320px;
+    margin: 0px;
     max-width: 600px;
+    height: 461px
+
   }
-  .grid-form {
-    margin: -27px 78px;
+  
+  .grid-form  {
+    margin: 23px 32px;
   }
+  
   .login-forget-password {
     font-weight: 700;
     color: #16033a!important;
@@ -66,6 +110,9 @@ body,html {
   .alert-text{
     margin: -8px 100px;
   }
+  .ng-invalid.ng-touched:not(form) {
+    border: 1px solid red;
+  } 
 
   @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
@@ -90,6 +137,11 @@ body,html {
     color: #aaa;
     cursor: default;
   }
-  .ng-invalid.ng-touched:not(form) {
-    border: 1px solid red;
-  } 
+  .lnr-eye {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+  
+  
