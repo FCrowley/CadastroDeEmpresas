@@ -112,7 +112,6 @@ export class LoginComponent implements OnInit {
   directForgetPassword() {
     this.router.navigate(['/forget-password']);
   }
-
   get email() {
     return this.loginForm.get('email')
   }
