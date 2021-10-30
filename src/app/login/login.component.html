@@ -29,9 +29,9 @@
                             <b>Senha:</b>
                         </label><br>
                         <input type="password" class="form-control label-text
-                                 i input-container input-container input" formControlName="password" id="password"
+                                 i input-container input-container input" formControlName="password" id="input-senha"
                             placeholder="Digite sua senha">
-                        <i class="material-icons visibility">visibility_off
+                        <i class="material-icons" id="visibility" (click)="visibilityPassword()"> visibility_off
                         </i>
                         <div *ngIf="password.errors && !password.valid && password.touched"
                             class="alert alert-danger alert-error" role="alert">
