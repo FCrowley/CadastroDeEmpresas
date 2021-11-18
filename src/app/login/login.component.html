@@ -4,51 +4,61 @@
         <h6 class=" text-center text-top text-white">Informe seu e-mail e senha para entrar na plataforma
         </h6>
         <div class="container ">
-            <div id="login-box" class=" login-align ">
-                <form class="form " [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="login-form" class="form "
-                    method="post">
-                    <h1 class="text-center text-info login-text-color"><b>Login</b></h1>
-                    <div class="form-group">
-                        <label for="email" class="text-info user-text-color">
-                            <b>Usuário:</b>
-                        </label><br>
-                        <input type="text" class="form-control label-text letter-text-color" formControlName="email"
-                            id="email" autocomplete="off" placeholder="Digite seu usuário">
-                        <div *ngIf="email.errors && !email.valid && email.touched"
-                            class="alert-error alert alert-danger" role="alert">
-                            <p *ngIf="email.errors.required" class="alert-text">
-                                O Usuário é obrigatório.
-                            </p>
-                            <p *ngIf="email.errors.email" class="alert-text">
-                                Digite um e-mail válido.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="password-text-color">
-                            <b>Senha:</b>
-                        </label><br>
-                        <input type="password" class="form-control label-text
+            <div id="login-row" class="row justify-content-center ">
+                <div id="login-column" class="col-md-6 login-align ">
+                    <div id="login-box" class="col-md-12 login-container">
+                        <div id="login-box" class="">
+                            <form class="form " [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="login-form"
+                                class="form " method="post">
+                                <h1 class="text-center text-info login-text-color"><b>Login</b></h1>
+                                <div class="form-group">
+                                    <label for="email" class="text-info user-text-color">
+                                        <b>Usuário:</b>
+                                    </label><br>
+                                    <input type="text" class="form-control label-text letter-text-color"
+                                        formControlName="email" id="email" autocomplete="off"
+                                        placeholder="Digite seu usuário">
+                                    <div *ngIf="email.errors && !email.valid && email.touched"
+                                        class="alert-error alert alert-danger" role="alert">
+                                        <p *ngIf="email.errors.required" class="alert-text">
+                                            O Usuário é obrigatório.
+                                        </p>
+                                        <p *ngIf="email.errors.email" class="alert-text">
+                                            Digite um e-mail válido.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="password-text-color">
+                                        <b>Senha:</b>
+                                    </label><br>
+                                    <input type="password" class="form-control label-text
                                  i input-container input-container input" formControlName="password" id="input-senha"
-                            placeholder="Digite sua senha">
-                        <i class="material-icons" id="visibility" (click)="visibilityPassword()"> visibility_off
-                        </i>
-                        <div *ngIf="password.errors && !password.valid && password.touched"
-                            class="alert alert-danger alert-error" role="alert">
-                            <p *ngIf="password.errors.required" class="alert-text">
-                                A Senha é obrigatório.
-                            </p>
+                                        placeholder="Digite sua senha">
+                                    <i class="material-icons" id="visibility" (click)="visibilityPassword()">
+                                        visibility_off
+                                    </i>
+                                    <div *ngIf="password.errors && !password.valid && password.touched"
+                                        class="alert alert-danger alert-error" role="alert">
+                                        <p *ngIf="password.errors.required" class="alert-text">
+                                            A Senha é obrigatório.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit"
+                                        class="btn btn-primary btn-lg btn-block login-button enter-text-color"
+                                        [disabled]="!loginForm.valid">Entrar</button>
+                                    <div class="form-group">
+                                        <button (click)="directForgetPassword()" type="button"
+                                            class="text-center btn btn-link login-forget-password">Esqueceu a
+                                            Senha?</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button enter-text-color"
-                            [disabled]="!loginForm.valid">Entrar</button>
-                        <div class="form-group">
-                            <button (click)="directForgetPassword()" type="button"
-                                class="text-center btn btn-link login-forget-password">Esqueceu a Senha?</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
