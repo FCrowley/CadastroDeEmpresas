@@ -4,6 +4,21 @@ body,html {
     background-color: #080311;
     height: 100vh;
   }
+
+  #login .container #login-row #login-column #login-box {
+    margin-top: 6px;
+    max-width: 600px;
+    height: 370px;
+    border: 1px solid #9C9C9C;
+    background-color: #e3d9f348;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: 0px;
+  }
+
   .bg{
     background-image: url("bg/img/ft1_photos_v2_x2.jpg");
     background-repeat: no-repeat;
@@ -13,17 +28,6 @@ body,html {
     padding: 30px;
   }
  
-  .login-align{
-    margin: 32px 0px;
-    align-items: center;
-    display: flex;
-    border-radius: 10px;
-    border: groove;
-    background: rgba(79, 12, 124, 0.158);
-    
-    
-  }
-  
   .login-forget-password {
     font-weight: 700;
     color: #16033a!important;
@@ -101,26 +105,7 @@ body,html {
     right: 10px;
     cursor: pointer;
 }
-/* Desktop grande */
-@media (min-width: 1200px) {
-  .login-align {
-    background-color: rgb(239, 243, 16);
-  }
-}
- /* Telefones em paisagem a tablet em retrato */
- @media (max-width: 767px) {
-  .login-align {
-    background-color: rgb(85, 11, 155);
-  }
-}
-/*For mobile phones */
-  @media only screen and (max-width:510px) {
-    .login-align .alert-danger {
-     background-color: lawngreen;
-     
-      
-    }
-  } 
+
 
   
   
